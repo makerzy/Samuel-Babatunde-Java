@@ -54,7 +54,7 @@ public class Main {
             }
             customer.setId(id);
             customer.setName(name);
-            customer.addCharges(accountRecord);
+            customer.getCharges().add(accountRecord);
         }
 //        List<Customer> posCustomers = customers.stream().filter(customer -> customer.getBalance()>=0)
 //                .collect(Collectors.toList());

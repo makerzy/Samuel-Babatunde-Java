@@ -33,10 +33,6 @@ public class Customer {
         return total;
     }
 
-//    Made by me
-    public void addCharges(AccountRecord accountRecord){
-        charges.add(accountRecord);
-    }
 
     public List<AccountRecord> getCharges() {
         return charges;

@@ -22,7 +22,7 @@ public class CustomerTest {
             AccountRecord record = new AccountRecord();
             record.setChargeDate(data[1]);
             record.setCharge(Integer.parseInt(data[0]));
-            customer.addCharges(record);
+            customer.getCharges().add(record);
         });
         customer.setName("Customer Name");
         customer.setId(1);
