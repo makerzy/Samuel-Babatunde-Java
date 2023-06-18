@@ -65,6 +65,7 @@ public class Main {
         customers.stream().filter(customer -> customer.getBalance()>=0)
                 .forEach(System.out::println);
         System.out.println("Negative accounts:");
-        customers.stream().filter(customer -> customer.getBalance() < 0).forEach(System.out::println);
+        customers.stream().filter(customer -> customer.getBalance() < 0)
+                .forEach(System.out::println);
     }
 }

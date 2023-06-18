@@ -1,0 +1,81 @@
+openapi: 3.0.1
+info:
+  title: OpenAPI definition
+  version: v0
+servers:
+  - url: http://localhost:8080
+    description: Generated server url
+paths:
+  /users:
+    get:
+      tags:
+        - chatterbook-controller
+      operationId: getUserList
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/User'
+  /user/{name}:
+    get:
+      tags:
+        - chatterbook-controller
+      operationId: getUser_1
+      parameters:
+        - name: name
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/User'
+  /chat/{user}:
+    get:
+      tags:
+        - chatterbook-controller
+      operationId: getUserChatterPosts_1
+      parameters:
+        - name: user
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ChatterPost'
+components:
+  schemas:
+    ChatterPost:
+      type: object
+      properties:
+        text:
+          type: string
+    User:
+      type: object
+      properties:
+        name:
+          type: string
+        chatterPosts:
+          type: array
+          items:
+            $ref: '#/components/schemas/ChatterPost'
+        chatterPost:
+          type: array
+          writeOnly: true
+          items:
+            $ref: '#/components/schemas/ChatterPost'
