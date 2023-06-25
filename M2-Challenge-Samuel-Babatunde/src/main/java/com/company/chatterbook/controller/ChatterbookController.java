@@ -53,7 +53,7 @@ public class ChatterbookController {
         return userList;
     }
 
-    @RequestMapping(value = "user/{name}")
+    @RequestMapping(value = "user/{name}", method = RequestMethod.GET)
     public User getUser(@PathVariable("name") String username){
         username = sanitize(username.strip());
         User user = null;
@@ -67,7 +67,7 @@ public class ChatterbookController {
         return user;
     }
 
-    @RequestMapping(value = "chat/{user}")
+    @RequestMapping(value = "chat/{user}", method = RequestMethod.GET)
     public List<ChatterPost> getUserChatterPosts(@PathVariable("user") String username){
         User user = null;
         List<ChatterPost> userPosts = new ArrayList<>();
