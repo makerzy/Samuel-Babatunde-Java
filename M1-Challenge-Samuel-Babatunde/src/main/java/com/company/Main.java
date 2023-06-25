@@ -30,8 +30,10 @@ public class Main {
 
     public static void main(String[] args) {
         //Update this
-        List<Customer> customers = new ArrayList<>();
+         List<Customer> customers = new ArrayList<>();
+       // Convert ArrayList to Iterator
         ListIterator<String[]> iterator = customerData.listIterator();
+
         while (iterator.hasNext()){
             String[] cData = iterator.next();
 //            convert the id to int type
@@ -45,21 +47,17 @@ public class Main {
             Customer customer;
 //            Check if we have a record for the customer ID
             if(customers.size() >=id){
-//                get the customer at the index (id) -1
+//              get the customer at the index (id) -1
                 customer = customers.get(id-1);
             }else{
-//                create a new customer and add to the customer list
+//              create a new customer and add to the customer list
                 customer = new Customer();
                 customers.add(customer);
+                customer.setId(id);
+                customer.setName(name);
             }
-            customer.setId(id);
-            customer.setName(name);
             customer.getCharges().add(accountRecord);
         }
-//        List<Customer> posCustomers = customers.stream().filter(customer -> customer.getBalance()>=0)
-//                .collect(Collectors.toList());
-//        List<Customer> negCustomers= customers.stream().filter(customer -> customer.getBalance() < 0)
-//                .collect(Collectors.toList());
 
         System.out.println("Positive accounts:");
         customers.stream().filter(customer -> customer.getBalance()>=0)

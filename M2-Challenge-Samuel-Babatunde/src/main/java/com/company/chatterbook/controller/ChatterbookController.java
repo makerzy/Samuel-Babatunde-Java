@@ -87,8 +87,8 @@ public class ChatterbookController {
     }
 
 
-    private String sanitize(String rawiput){
-        return rawiput.replaceAll("[^A-Za-z0-9_]", "");
+    private String sanitize(String rawinput){
+        return rawinput.replaceAll("[^A-Za-z0-9_]", "");
     }
 
 }
