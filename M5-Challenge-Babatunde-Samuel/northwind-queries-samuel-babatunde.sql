@@ -1,81 +1,81 @@
-use northwind;
+USE northwind;
 
 -- 1. What are the categories of products in the database? 
-select
-  distinct category
-from
+SELECT
+  DISTINCT category
+FROM
   products p;
 
 -- 2. What products are made by Dell?
-select
+SELECT
   *
-from
+FROM
   products p
-where
-  product_name like 'dell%';
+WHERE
+  product_name LIKE 'dell%';
 
 -- 3. List all the orders shipped to Pennsylvania.
-select
+SELECT
   *
-from
+FROM
   orders o
-where
+WHERE
   ship_state = 'Pennsylvania';
 
 -- 4. List the first name and last name of all employees with last names that start with the letter W.
-select
+SELECT
   e.first_name,
   e.last_name
-from
+FROM
   employees e
-where
-  e.last_name like 'W%';
+WHERE
+  e.last_name LIKE 'W%';
 
--- 5. List all customers from zip codes that start with 55.
-select
+-- 5. List all customers FROM zip codes that start with 55.
+SELECT
   *
-from
+FROM
   customers c
-where
-  c.postal_code like '55%';
+WHERE
+  c.postal_code LIKE '55%';
 
--- 6. List all customers from zip codes that end with 0.
-select
+-- 6. List all customers FROM zip codes that end with 0.
+SELECT
   *
-from
+FROM
   customers c
-where
-  c.postal_code like '%0';
+WHERE
+  c.postal_code LIKE '%0';
 
 -- 7. List the first name, last name, and email for all customers with a ".org" email address.
-select
+SELECT
   c.first_name,
   c.last_name,
   c.email
-from
+FROM
   customers c
-where
-  c.email like '%.org';
+WHERE
+  c.email LIKE '%.org';
 
--- 8. List the first name, last name, and phone number for all customers from the 202 area code.
-select
+-- 8. List the first name, last name, and phone number for all customers FROM the 202 area code.
+SELECT
   c.first_name,
   c.last_name,
   c.phone
-from
+FROM
   customers c
-where
-  c.phone like '1-(202)%';
+WHERE
+  c.phone LIKE '1-(202)%';
 
--- 9. List the first name, last name, and phone number for all customers from the 202 area code, ordered by last name, first name.
-select
+-- 9. List the first name, last name, and phone number for all customers FROM the 202 area code, ordered by last name, first name.
+SELECT
   c.first_name,
   c.last_name,
   c.phone
-from
+FROM
   customers c
-where
-  c.phone like '1-(202)%'
-order by
+WHERE
+  c.phone LIKE '1-(202)%'
+ORDER BY
   c.last_name,
-  c.first_name asc;
+  c.first_name ASC;
