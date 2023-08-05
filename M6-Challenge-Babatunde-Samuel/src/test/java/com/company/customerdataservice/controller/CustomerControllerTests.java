@@ -117,7 +117,8 @@ public class CustomerControllerTests {
     public void shouldUpdateCustomerById() throws Exception {
         customer.setFirstName("new_first_name");
         customer.setLastName("new_last_name");
-        mockMvc.perform(put("/customers/{id}", customer.getId())
+        int id = customer.getId();
+        mockMvc.perform(put("/customers/{id}", id)
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(customer))
                         .characterEncoding("utf-8"))
@@ -130,7 +131,9 @@ public class CustomerControllerTests {
     //    DELETE
     @Test
     public void shouldDeleteCustomerById() throws Exception {
-        mockMvc.perform(delete("/customers/{id}", customer.getId())
+        int id = customer.getId();
+        System.out.println("ID: "+id);
+        mockMvc.perform(delete("/customers/{id}",id)
                       )
                 .andDo(print())
                 .andExpect(status().isNoContent())
