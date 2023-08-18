@@ -5,7 +5,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.security.Principal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -93,12 +92,6 @@ public class RecordStoreController {
         if (index >= 0) {
             recordList.remove(index);
         }
-    }
-
-    @RequestMapping(value = "/home", method = RequestMethod.GET)
-    public String home(Principal principal) {
-
-        return "Everyone is welcome.";
     }
 }
 

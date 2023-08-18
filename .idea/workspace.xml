@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d6190947-960b-41d5-adab-4ae3f265c896" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/M1-Challenge-Samuel-Babatunde/starter/accounting-challenge/src/main/java/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/M1-Challenge-Samuel-Babatunde/starter/accounting-challenge/src/main/java/com/company/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/M9-Challenge-Babatunde-Samuel/src/main/java/com/company/recordstoreapi/OAuthConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/M9-Challenge-Babatunde-Samuel/src/main/java/com/company/recordstoreapi/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/M9-Challenge-Babatunde-Samuel/src/main/java/com/company/recordstoreapi/RecordStoreApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/M9-Challenge-Babatunde-Samuel/src/main/java/com/company/recordstoreapi/RecordStoreApiApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/M9-Challenge-Babatunde-Samuel/src/main/java/com/company/recordstoreapi/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/M9-Challenge-Babatunde-Samuel/src/main/java/com/company/recordstoreapi/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/M9-Challenge-Babatunde-Samuel/src/main/java/com/company/recordstoreapi/controller/ControllerExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/M9-Challenge-Babatunde-Samuel/src/main/java/com/company/recordstoreapi/controller/RecordStoreController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/M9-Challenge-Babatunde-Samuel/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/M9-Challenge-Babatunde-Samuel/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/M9-Challenge-Babatunde-Samuel/src/test/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/M9-Challenge-Babatunde-Samuel/src/test/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +36,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main"
   }
